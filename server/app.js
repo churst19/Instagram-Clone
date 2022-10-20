@@ -3,6 +3,9 @@ const app = express()
 const mongoose = require('mongoose')
 const PORT = 5000
 const {MONGOURI} = require('./keys')
+// const dotenv = require('dotenv')
+// require('dotenv').config()
+// const MONGOURI = process.env.MONGOURI
 // var cors = require('cors');
 // app.use(cors());
 
