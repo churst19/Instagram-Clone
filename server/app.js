@@ -2,10 +2,10 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const PORT = 5000
-const {MONGOURI} = require('./keys')
-// const dotenv = require('dotenv')
-// require('dotenv').config()
-// const MONGOURI = process.env.MONGOURI
+// const {MONGOURI} = require('./keys')
+const dotenv = require('dotenv')
+require('dotenv').config()
+const MONGOURI = process.env.MONGOURI
 // var cors = require('cors');
 // app.use(cors());
 
@@ -31,6 +31,7 @@ require('./models/post')
 app.use(express.json())
 app.use(require('./routes/auth'))
 app.use(require('./routes/post'))
+app.use(require('./routes/user'))
 
 
 
