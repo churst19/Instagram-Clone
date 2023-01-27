@@ -61,6 +61,16 @@ router.put('/unfollow',requireLogin,(req,res)=>{
     })
 })
 
+router.put('/updatepic',requireLogin,(req,res) => {
+    User.findByIdAndUpdate(req.user._id,{$set:{pic:req.body.pic}},{new:true, select:"-password"},
+        (err,result)=>{
+            if (err){
+                return res.status(422).json({error:"unable to post image"})
+            }
+            res.json(result)
+        })
+})
+
 
 
 module.exports = router

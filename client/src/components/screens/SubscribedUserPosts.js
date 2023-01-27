@@ -7,7 +7,7 @@ const Home = () =>{
     const [data,setData] = useState([])
     const {state,dispatch} = useContext(UserContext)
     useEffect(() => {
-        fetch("/allpost", {
+        fetch("/getsubpost", {
             headers:{
                 "Authorization":"Bearer " + localStorage.getItem("jwt")
             }
@@ -148,7 +148,8 @@ const Home = () =>{
     return(
         <div className='home'>
             {
-                data.map(item => {
+                data.length>0
+                ? data.map(item => {
                     return (
                         <div className='card home-card' key={item._id}>
                             <h5 style={{padding:"5px"}}><Link to={item.postedBy._id !== state._id ? "/profile/"+item.postedBy._id : "/profile/"}>{item.postedBy.name}</Link> {item.postedBy._id == state._id 
@@ -202,6 +203,7 @@ const Home = () =>{
                         </div>
                     )
                 })
+                : <h1>No Subscribed Posts</h1>
             }
         </div>
     )
