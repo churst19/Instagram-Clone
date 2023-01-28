@@ -15,8 +15,6 @@ const Profile = () =>{
             }
         }).then(res =>res.json())
         .then(result =>{
-            // console.log('here')
-            // console.log(result)
             setPics(result.mypost)
         })
     },[],[])

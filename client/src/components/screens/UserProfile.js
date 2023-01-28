@@ -15,14 +15,7 @@ const Profile = () =>{
             }
         }).then(res =>res.json())
         .then(result =>{
-            // console.log(result.user)
-            // const userFollowing = result.user.following
-            // const userFollowers = result.user.followers
-            // console.log(userFollowing.length)
-            // console.log(userFollowers.length)
             setProfile(result)
-            // console.log(userProfile)
-
         })
     },[],[])
 
@@ -38,7 +31,6 @@ const Profile = () =>{
             })
         }).then(res=>res.json())
         .then(data=>{
-            // console.log(data)
             dispatch({type:"UPDATE", payload:{following:data.following,followers:data.followers}})
             localStorage.setItem("user",JSON.stringify(data))
             setProfile((prevState)=>{
