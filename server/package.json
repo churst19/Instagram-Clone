@@ -17,5 +17,8 @@
     "jsonwebtoken": "^8.5.1",
     "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^6.5.4"
+  },
+  "engines" : { 
+    "node" : ">=16.17.0 <17.0.0"
   }
 }
