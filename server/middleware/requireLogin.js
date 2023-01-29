@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const {JWT_SECRET} = require('../config/keys')
 // const dotenv = require('dotenv')
 // require('dotenv').config()
-const JWT_SECRET = process.env.JWT_SECRET
+// const JWT_SECRET = process.env.JWT_SECRET
 const mongoose = require('mongoose')
 const User = mongoose.model("User")
 
