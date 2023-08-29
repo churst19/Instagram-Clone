@@ -10,11 +10,11 @@ var cors = require("cors")
 app.use(cors())
 
 if (process.env.NODE_ENV == "production") {
-  app.use(express.static("client/build"))
-  const path = require("path")
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
-  })
+  app.use(express.static("/client/build"))
+  // const path = require("path")
+  // app.get("*", (req, res) => {
+  //   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+  // })
 }
 
 mongoose.connect(MONGOURI, {
@@ -25,7 +25,7 @@ mongoose.connection.on("connected", () => {
   console.log("connected to mongo")
 })
 mongoose.connection.on("error", (err) => {
-  console.log("err connecting to mongo", err)
+  console.log("error connecting to mongo", err)
 })
 
 require("./models/user")
