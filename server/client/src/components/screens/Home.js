@@ -14,9 +14,6 @@ const Home = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log("reult: ", result)
-        console.log("result data: ", result.data)
-        console.log("result posts: ", result.posts)
         setData(result.posts)
       })
   }, [])
@@ -34,7 +31,6 @@ const Home = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        // console.log(result)
         const newData = data.map((item) => {
           if (item._id == result._id) {
             return { ...item, likes: result.likes }
@@ -62,7 +58,6 @@ const Home = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        // console.log(result)
         const newData = data.map((item) => {
           if (item._id == result._id) {
             return { ...item, likes: result.likes }
@@ -91,7 +86,6 @@ const Home = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        // console.log(result)
         const newData = data.map((item) => {
           if (item._id == result._id) {
             return result
@@ -115,7 +109,6 @@ const Home = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        // console.log(result)
         const newData = data.filter((item) => {
           return item._id !== result._id
         })
