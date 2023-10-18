@@ -25,5 +25,6 @@ On pages where posts are displayed, authentication is checked, Posts are pulled 
  
  <br/><br/>
  
-This project was a tutorial from Coders Never Quit on Youtube.
+This project was developed following a tutorial from Coders Never Quit on Youtube.<br/>
+*My follow-up project, NovaCommerce, was developed independently in order to reinforce what I learned in this project*
 Source:https://www.youtube.com/playlist?list=PLB97yPrFwo5g0FQr4rqImKa55F_aPiQWk
