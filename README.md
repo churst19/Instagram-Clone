@@ -1,5 +1,4 @@
 Link to site: https://instagram-clone3000.herokuapp.com
-***Currently down for update 2-6-24***
 
 **Note:** to use this website, it does not require you to use a real email address or verify it,
 so you can easily create a new user and look at the website.
